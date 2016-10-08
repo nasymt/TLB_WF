@@ -12,28 +12,30 @@
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
 
-class DataReaderHex {
-public:
-    DataReaderHex(){};
-    ~DataReaderHex(){};
-    
-    void loadXml(string path){
+class DataReaderBall {
+   public:
+    DataReaderBall(){};
+    ~DataReaderBall(){};
+
+    void loadXml(string path) {
         xml = new ofxXmlSettings();
-        xml->load("xml/hex.xml");
-        
-        xml->pushTag("serial");
-        string hexMessage = xml->getValue("hex","");
-        for(int i=0;i<hexMessage.size();i++){
-            if(hexMessage[i]==' '){
-                char tmp = ofToChar(hexMessage.substr(i-4,4));
-                sendSerial.push_back(tmp);
-            }
+        xml->load("xml/ball.xml");
+
+        xml->pushTag("Ball");
+        ball_num = xml->getNumTags("ball");
+        for (int i = 0; i < ball_num; i++) {
+            channel.push_back(xml->getValue("ball:channel", 0, i));
+            id.push_back(xml->getValue("ball:id", 0, i));
+            group_id.push_back(xml->getValue("ball:group_id", 0, i));
         }
     };
-    
-    vector<Byte> sendSerial;
-    
-private:
+
+    int ball_num;
+    vector<int> channel;
+    vector<int> id;
+    vector<int> group_id;
+
+   private:
     ofxXmlSettings *xml;
 };
 

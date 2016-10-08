@@ -32,8 +32,8 @@ class Hex {
         tmp_byte.push_back(0x00);  // length
         return tmp_byte;
     }
-    
-    vector<Byte> readProfile(){
+
+    vector<Byte> readProfile() {
         vector<Byte> tmp_byte;
         tmp_byte.push_back(0x5A);
         tmp_byte.push_back(0xA5);
@@ -43,7 +43,7 @@ class Hex {
         return tmp_byte;
     }
 
-    vector<Byte> randomColor() {
+    vector<Byte> changeColor(ofColor _color) {
         vector<Byte> tmp_byte;
         //-----header-----------
         tmp_byte.push_back(0x5A);
@@ -61,16 +61,16 @@ class Hex {
         tmp_byte.push_back(0xFF);  //
         //---ball send func-----
         tmp_byte.push_back(0x01);  //
-        tmp_byte.push_back(0x00);  //R
-        tmp_byte.push_back(0x00);  //G
-        tmp_byte.push_back(0xFF);  //B
-        tmp_byte.push_back(0x01);  //fade time (high)
-        tmp_byte.push_back(0xF4);  //fade time (low)
-        
+        tmp_byte.push_back(_color.r);  // R
+        tmp_byte.push_back(_color.g);  // G
+        tmp_byte.push_back(_color.b);  // B
+        tmp_byte.push_back(0x01);  // fade time (high)
+        tmp_byte.push_back(0xF4);  // fade time (low)
+
         return tmp_byte;
     }
-    
-    vector<Byte> setNode(int node){
+
+    vector<Byte> setNode(int node) {
         vector<Byte> tmp_byte;
         tmp_byte.push_back(0x5A);
         tmp_byte.push_back(0xA5);
@@ -81,8 +81,8 @@ class Hex {
         tmp_byte.push_back(node);
         return tmp_byte;
     }
-    
-    vector<Byte> lightoff(){
+
+    vector<Byte> lightoff() {
         vector<Byte> tmp_byte;
         //-----header-----------
         tmp_byte.push_back(0x5A);
@@ -100,14 +100,14 @@ class Hex {
         tmp_byte.push_back(0xFF);
         //---ball send func-----
         tmp_byte.push_back(0x01);
-        tmp_byte.push_back(0x00);//R
-        tmp_byte.push_back(0x00);//G
-        tmp_byte.push_back(0x00);//B
-        
+        tmp_byte.push_back(0x00);  // R
+        tmp_byte.push_back(0x00);  // G
+        tmp_byte.push_back(0x00);  // B
+
         return tmp_byte;
     }
-    
-    vector<Byte> setBreathMode(){
+
+    vector<Byte> setBreathMode() {
         vector<Byte> tmp_byte;
         //-----header-----------
         tmp_byte.push_back(0x5A);
@@ -126,18 +126,41 @@ class Hex {
         //---ball send func-----
         tmp_byte.push_back(0x0B);
         tmp_byte.push_back(0x01);
-        
+
         return tmp_byte;
     }
-    
-    vector<Byte> changeColor(int r,int g,int b){
+
+    vector<Byte> setDirectAlpha(int alpha) {
         vector<Byte> tmp_byte;
-        
-        
-        
+        //-----header-----------
+        tmp_byte.push_back(0x5A);
+        tmp_byte.push_back(0xA5);
+        //-----command----------
+        tmp_byte.push_back(0x01);
+        //-----length-----------
+        tmp_byte.push_back(0x00);
+        tmp_byte.push_back(0x09);
+        //-----send option------
+        tmp_byte.push_back(0x04);
+        tmp_byte.push_back(0xFF);
+        tmp_byte.push_back(0xFF);
+        //---ball send type-----
+        tmp_byte.push_back(0xFF);
+        //---ball send func-----
+        tmp_byte.push_back(0x09);
+        tmp_byte.push_back(0x00);
+        tmp_byte.push_back(0x06);
+        tmp_byte.push_back(0x00);
+        tmp_byte.push_back(alpha);
+
         return tmp_byte;
     }
-    
+
+//    vector<Byte> changeColor(int r, int g, int b) {
+//        vector<Byte> tmp_byte;
+//
+//        return tmp_byte;
+//    }
 
     Byte checkSum(vector<Byte> _checksum) {
         Byte tmp = 0x00;

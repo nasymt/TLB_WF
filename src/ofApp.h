@@ -3,7 +3,14 @@
 #include "ofMain.h"
 #include "DataReaderHex.hpp"
 #include "DataReaderConfig.hpp"
+#include "DataReaderBall.hpp"
 #include "hex.hpp"
+#include "ballManagement.hpp"
+#include "selectPad.hpp"
+#include "ofxGui.h"
+#include "serialCommunication.hpp"
+#include "soundPlayer.hpp"
+#include "sceneManagement.hpp"
 
 class ofApp : public ofBaseApp {
    public:
@@ -31,6 +38,16 @@ class ofApp : public ofBaseApp {
    private:
     DataReaderHex *hex_xml;
     DataReaderConfig *config_xml;
+    DataReaderBall *ball_xml;
+    SelectPad *pad;
+    vector<BallManagement> ball;
+    SoundPlayer sound;
+    ofxPanel gui;
+    ofxColorSlider color;
+    ofxIntSlider fadeTime;
+    SerialCommunication _serial;
+    SceneManagement scene;
+    
     
     
     Hex _hex;
@@ -46,4 +63,9 @@ class ofApp : public ofBaseApp {
     string lpr_channel;
     bool edit_lprNode;
     bool edit_lprCh;
+    int ball_num;
+    
+    int absoluteTime;
+    int relativeTime;
+    string scene_name;
 };

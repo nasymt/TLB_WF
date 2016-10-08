@@ -1,0 +1,18 @@
+<soundScene>
+    <scene>
+        <name>scene1</name>
+        <startTime>0</startTime>
+    </scene>
+    <scene>
+        <name>scene2</name>
+        <startTime>15000</startTime>
+    </scene>
+    <scene>
+        <name>scene3</name>
+        <startTime>30000</startTime>
+    </scene>
+    <scene>
+        <name>scene4</name>
+        <startTime>45000</startTime>
+    </scene>
+</soundScene>

@@ -20,18 +20,22 @@ class DataReaderConfig {
     void loadXml(string path){
         xml = new ofxXmlSettings();
         xml->load("xml/config.xml");
-        
         xml->pushTag("config");
         xml->pushTag("lpr_settings");
         lpr_node = xml->getValue("node","");
         lpr_channel = xml->getValue("channel","");
-        cout << lpr_node << " : " << lpr_channel << endl;
-        
+        xml->popTag();
+        auto_setup = xml->getValue("auto_setup",0);
+        sound_path = xml->getValue("sound_path","");
+        threshold = xml->getValue("scene_threshold",0);
         delete xml;
     };
     
     string lpr_node;
     string lpr_channel;
+    string sound_path;
+    bool auto_setup;
+    int threshold;
     
    private:
     ofxXmlSettings *xml;

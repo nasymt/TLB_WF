@@ -3,5 +3,8 @@
         <node>6098</node>
         <channel>33</channel>
     </lpr_settings>
+    <auto_setup>0</auto_setup>
+    <sound_path>worldforum.mp3</sound_path>
+    <scene_threshold>30</scene_threshold>
     
 </config>
