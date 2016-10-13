@@ -2,7 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-    // serial = new SerialCommunication();
     _serial.setup(5);
     ofSetFrameRate(60);
 
@@ -17,7 +16,7 @@ void ofApp::setup() {
     hex_xml->loadXml("xml/hex.xml");
     sendHex = hex_xml->sendSerial;
     delete hex_xml;
-    
+
     sound.setup();
 
     config_xml = new DataReaderConfig();
@@ -26,11 +25,11 @@ void ofApp::setup() {
     lpr_channel = config_xml->lpr_channel;
     if (config_xml->auto_setup) {
         cout << "auto_setup" << endl;
-//        vector<Byte> sendByte;
-//        sendByte = _hex.setNode(ofToInt(lpr_node));
-//        _serial.sendSerial(sendByte);
-//        sendByte = _hex.setChannel(ofToInt(lpr_channel));
-//        _serial.sendSerial(sendByte);
+        //        vector<Byte> sendByte;
+        //        sendByte = _hex.setNode(ofToInt(lpr_node));
+        //        _serial.sendSerial(sendByte);
+        //        sendByte = _hex.setChannel(ofToInt(lpr_channel));
+        //        _serial.sendSerial(sendByte);
     }
     delete config_xml;
 
@@ -40,8 +39,8 @@ void ofApp::setup() {
 
     pad = new SelectPad();
     pad->setup(_serial);
-    
-    scene.setup(_serial);
+
+    scene.setup();
 
     for (int i = 0; i < ball_num; i++) {
         ball.push_back(BallManagement());
@@ -61,12 +60,15 @@ void ofApp::setup() {
 void ofApp::update() {
     pad->update();
     sound.update();
-    if(sound.isPlaying){
+    for (int i = 0; i < ball_num; i++) {
+        ball[i].update();
+    }
+    if (sound.isPlaying) {
         relativeTime = sound.relativeTime;
         absoluteTime = sound.absoluteTime;
         scene_name = sound.now_scene;
-        
-        scene.update(absoluteTime,relativeTime,scene_name);
+
+        scene.update(absoluteTime, relativeTime, scene_name, &_serial, &ball);
     }
 }
 
@@ -91,31 +93,56 @@ void ofApp::draw() {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
+    if (key == 'z') {
+        pad->sendSerial(_hex.connect(), &_serial);
+    } else if (key == 'x') {
+        pad->sendSerial(_hex.setChannel(ofToInt(lpr_channel)), &_serial);
+    } else if (key == 'c') {
+        pad->sendSerial(_hex.setNode(ofToInt(lpr_node)), &_serial);
+    } else if (key == 'v') {
+    } else if (key == 'b') {
+        pad->sendSerial(_hex.changeColor(color, 5000), &_serial);
+    } else if (key == 'n') {
+        pad->sendSerial(_hex.lightoff(), &_serial);
+    } else if (key == 'm') {
+        pad->sendSerial(_hex.setDirectAlpha(100), &_serial);
+    } else if (key == 'a') {
+        pad->sendSerial(_hex.changeGroupColor(1, ofColor(0, 255, 255), 1000), &_serial);
+    } else if (key == 's') {
+        pad->sendSerial(_hex.changeGroupColor(2, ofColor(0, 255, 255), 1000), &_serial);
+    } else if (key == 'q') {
+        pad->sendSerial(_hex.uartOverrunResend(), &_serial);
+    } else if (key == 'w') {
+        vector<bool> colorIndex;
+        for (int i = 0; i < 16; i++) {
+            colorIndex.push_back(false);
+        }
+        pad->sendSerial(_hex.selectRandomColor(colorIndex), &_serial);
+    } else if (key == 'e') {
+        pad->sendSerial(_hex.randomColor(1000), &_serial);
+    }
+
     if (key == '1') {
-        //        _serial.sendSerial(_hex.connect());
-        pad->sendSerial(_hex.connect(),&_serial);
-    }/* else if (key == '2') {
-        pad->sendSerial(_hex.setChannel(ofToInt(lpr_channel)),&_serial);
+        pad->sendSerial(_hex.setGroupId(1), &_serial);
+    } else if (key == '2') {
+        pad->sendSerial(_hex.setGroupId(2), &_serial);
     } else if (key == '3') {
-        pad->sendSerial(_hex.setNode(ofToInt(lpr_node)),&_serial);
+        pad->sendSerial(_hex.setGroupId(3), &_serial);
     } else if (key == '4') {
+        pad->sendSerial(_hex.setGroupId(4), &_serial);
     } else if (key == '5') {
-        pad->sendSerial(_hex.changeColor(color),&_serial);
+        pad->sendSerial(_hex.setGroupId(5), &_serial);
     } else if (key == '6') {
-        pad->sendSerial(_hex.lightoff(),&_serial);
-    } else if (key == '7') {
-        pad->sendSerial(_hex.setBreathMode(),&_serial);
-    } else if (key == '8') {
-        pad->sendSerial(_hex.setDirectAlpha(99),&_serial);
-    }*/
-    
-    if(key == 'p'){
-        if(sound.isPlaying){
-            sound.pause();
-        }else {
+        pad->sendSerial(_hex.setGroupId(6), &_serial);
+    }
+
+    if (key == 'p') {
+        if (sound.isPlaying) {
+            sound.pause(&scene);
+        } else {
             sound.play();
         }
-    }else if(key == OF_KEY_LEFT){
+    } else if (key == OF_KEY_LEFT) {
         sound.goToStart();
     }
 }

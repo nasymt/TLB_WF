@@ -1,32 +1,32 @@
 <Ball>
    <ball>
        <channel>33</channel>
-       <id>3333</id>
-       <group_id>0</group_id>
+       <id>3327</id>
+       <group_id>1</group_id>
    </ball>
    <ball>
        <channel>33</channel>
-       <id>4444</id>
-       <group_id>0</group_id>
+       <id>3333</id>
+       <group_id>2</group_id>
    </ball>
    <ball>
        <channel>33</channel>
        <id>5555</id>
-       <group_id>0</group_id>
+       <group_id>1</group_id>
    </ball>
    <ball>
        <channel>33</channel>
        <id>6666</id>
-       <group_id>0</group_id>
+       <group_id>2</group_id>
    </ball>
    <ball>
        <channel>33</channel>
        <id>7777</id>
-       <group_id>0</group_id>
+       <group_id>1</group_id>
    </ball>
    <ball>
        <channel>33</channel>
        <id>4444</id>
-       <group_id>0</group_id>
+       <group_id>2</group_id>
    </ball>
 </Ball>

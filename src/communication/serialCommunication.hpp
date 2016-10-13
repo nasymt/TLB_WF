@@ -34,6 +34,9 @@ class SerialCommunication {
     void recvSerial() {
         while (serial.available() > 0) {
             int readByte = serial.readByte();
+            if( readByte == 82 || readByte == 130){
+                cout << "==get serial error==  " <<  readByte << endl;
+            }
             cout << "[read] " << hex << readByte << endl;
         }
     }

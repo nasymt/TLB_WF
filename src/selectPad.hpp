@@ -101,7 +101,7 @@ class SelectPad {
 
     void sendSerial(vector<Byte> sendByte,SerialCommunication *_serial) {
         cout << _serial->test << endl;
-//        _serial->sendSerial(sendByte);
+        _serial->sendSerial(sendByte);
         cout << " send serial " << endl;
     }
 

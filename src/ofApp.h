@@ -11,6 +11,7 @@
 #include "serialCommunication.hpp"
 #include "soundPlayer.hpp"
 #include "sceneManagement.hpp"
+#include "ballBaseScene.hpp"
 
 class ofApp : public ofBaseApp {
    public:
@@ -39,6 +40,8 @@ class ofApp : public ofBaseApp {
     DataReaderHex *hex_xml;
     DataReaderConfig *config_xml;
     DataReaderBall *ball_xml;
+    BallBaseScene *baseScene;
+    
     SelectPad *pad;
     vector<BallManagement> ball;
     SoundPlayer sound;

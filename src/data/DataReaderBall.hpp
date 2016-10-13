@@ -25,14 +25,14 @@ class DataReaderBall {
         ball_num = xml->getNumTags("ball");
         for (int i = 0; i < ball_num; i++) {
             channel.push_back(xml->getValue("ball:channel", 0, i));
-            id.push_back(xml->getValue("ball:id", 0, i));
+            _id.push_back(xml->getValue("ball:id", 0, i));
             group_id.push_back(xml->getValue("ball:group_id", 0, i));
         }
     };
 
     int ball_num;
     vector<int> channel;
-    vector<int> id;
+    vector<int> _id;
     vector<int> group_id;
 
    private:

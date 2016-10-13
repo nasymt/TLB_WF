@@ -15,4 +15,22 @@
         <name>scene4</name>
         <startTime>45000</startTime>
     </scene>
+    <scene>
+        <name>scene5</name>
+        <startTime>60000</startTime>
+    </scene>
+    <scene>
+        <name>scene6</name>
+        <startTime>78800</startTime>
+    </scene>
+    <scene>
+        <name>scene7</name>
+        <startTime>93800</startTime>
+    </scene>
+    <scene>
+        <name>scene8</name>
+        <startTime>108850</startTime>
+    </scene>
+    
+    
 </soundScene>

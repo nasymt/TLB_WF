@@ -12,6 +12,7 @@
 #include "ofMain.h"
 #include "DataReaderConfig.hpp"
 #include "DataReaderSoundScene.hpp"
+#include "SceneManagement.hpp"
 
 class SoundPlayer {
    public:
@@ -25,6 +26,7 @@ class SoundPlayer {
         sound_xml->loadXml("xml/soundScene.xml");
         scene_name = sound_xml->name;
         startTime = sound_xml->startTime;
+        scene_num = sound_xml->sceneNum;
         delete sound_xml;
 
         sound.load(sound_path, true);
@@ -32,7 +34,6 @@ class SoundPlayer {
         sound.setPosition(0.99999f);
         duration = sound.getPositionMS();
         sound.setPosition(0);
-        //        sound.stop();
         sound.setPaused(true);
         cout << "sound duration :" << duration << endl;
         start_x = 30;
@@ -62,13 +63,16 @@ class SoundPlayer {
             }
             set_x = x;
         }
-        
 
         absoluteTime = sound.getPositionMS();
         now_x = (int)ofMap(absoluteTime, 0, duration, start_x, ofGetWidth() - start_x);
-        if (absoluteTime > startTime[scene_index + 1]) {
+        if (absoluteTime > startTime[scene_index + 1] && scene_index < scene_num - 1) {
             scene_index++;
-            scene_endTime = startTime[scene_index + 1] - startTime[scene_index];
+            if (scene_index >= scene_num - 1) {
+                scene_endTime = duration - startTime[scene_index];
+            } else {
+                scene_endTime = startTime[scene_index + 1] - startTime[scene_index];
+            }
         }
         relativeTime = absoluteTime - startTime[scene_index];
         now_scene = scene_name[scene_index];
@@ -85,11 +89,12 @@ class SoundPlayer {
         ofDrawRectangle(start_x, 0, end_x, 1);
         ofDrawLine(set_x, -10, set_x + 1, 10);
         ofNoFill();
+//        ofSetColor(255,0,255);
         ofDrawEllipse(now_x, 0, 10, 10);
 
         for (int i = 0; i < scene_name.size(); i++) {
             ofSetColor(200);
-            int tmp = ofMap(startTime[i], 0, duration, start_x, end_x);
+            int tmp = ofMap(startTime[i], 0, duration, start_x, end_x+30);
             ofDrawEllipse(tmp, 0, 8, 8);
         }
         ofFill();
@@ -101,12 +106,15 @@ class SoundPlayer {
         isPlaying = true;
     }
 
-    void pause() {
+    void pause(SceneManagement *_scene) {
+        for (int i = 0; i < _scene->isStart.size(); i++) {
+            _scene->isStart[i] = false;
+        }
         sound.setPaused(true);
         isPlaying = false;
     }
-    
-    void goToStart(){
+
+    void goToStart() {
         sound.setPaused(true);
         sound.setPosition(0);
         scene_index = 0;
@@ -120,8 +128,6 @@ class SoundPlayer {
     int absoluteTime;
     string now_scene;
 
-
-
    private:
     DataReaderConfig *config;
     DataReaderSoundScene *sound_xml;
@@ -134,6 +140,7 @@ class SoundPlayer {
     int duration;
     int scene_index;
     int scene_endTime;
+    int scene_num;
     vector<string> scene_name;
     vector<int> startTime;
     int sceneNum;

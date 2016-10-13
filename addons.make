@@ -1,1 +1,4 @@
+ofxEasing
+ofxGui
+ofxOsc
 ofxXmlSettings
