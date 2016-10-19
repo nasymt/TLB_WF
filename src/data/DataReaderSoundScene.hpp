@@ -29,6 +29,7 @@ class DataReaderSoundScene {
     int sceneNum;
     vector<string> name;
     vector<int> startTime;
+    
 
    private:
     ofxXmlSettings *xml;

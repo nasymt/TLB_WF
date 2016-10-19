@@ -12,7 +12,7 @@
 #include "ofMain.h"
 #include "DataReaderConfig.hpp"
 #include "DataReaderSoundScene.hpp"
-#include "SceneManagement.hpp"
+//#include "SceneManagement.hpp"
 
 class SoundPlayer {
    public:
@@ -20,6 +20,8 @@ class SoundPlayer {
         config = new DataReaderConfig();
         config->loadXml("xml/config.xml");
         sound_path = config->sound_path;
+        bool mute = config->mute;
+        osc_receive_enabled = config->osc_receive_enabled;
         delete config;
 
         sound_xml = new DataReaderSoundScene();
@@ -35,6 +37,9 @@ class SoundPlayer {
         duration = sound.getPositionMS();
         sound.setPosition(0);
         sound.setPaused(true);
+        if (mute) {
+            sound.setVolume(0);
+        }
         cout << "sound duration :" << duration << endl;
         start_x = 30;
         end_x = ofGetWidth() - 60;
@@ -64,7 +69,7 @@ class SoundPlayer {
             set_x = x;
         }
 
-        absoluteTime = sound.getPositionMS();
+        absoluteTime = sound.getPositionMS() + adjust_position;
         now_x = (int)ofMap(absoluteTime, 0, duration, start_x, ofGetWidth() - start_x);
         if (absoluteTime > startTime[scene_index + 1] && scene_index < scene_num - 1) {
             scene_index++;
@@ -76,29 +81,34 @@ class SoundPlayer {
         }
         relativeTime = absoluteTime - startTime[scene_index];
         now_scene = scene_name[scene_index];
+        if (scene_index == scene_num - 1 && relativeTime > scene_endTime - 100) {
+            sound.setPaused(true);
+        }
     }
 
     void draw() {
-        ofPushMatrix();
-        ofTranslate(0, 400);
-        ofSetColor(255);
-        ofDrawBitmapString("[duration] " + ofToString(duration), start_x, -60);
-        ofDrawBitmapString("[scene] " + scene_name[scene_index], start_x, -45);
-        ofDrawBitmapString("[time] " + ofToString(absoluteTime), start_x, -30);
-        ofDrawBitmapString("[sceneTime] " + ofToString(relativeTime) + " / " + ofToString(scene_endTime), start_x, -15);
-        ofDrawRectangle(start_x, 0, end_x, 1);
-        ofDrawLine(set_x, -10, set_x + 1, 10);
-        ofNoFill();
-//        ofSetColor(255,0,255);
-        ofDrawEllipse(now_x, 0, 10, 10);
+        if (!osc_receive_enabled) {
+            ofPushMatrix();
+            ofTranslate(0, 400);
+            ofSetColor(255);
+            ofDrawBitmapString("[duration] " + ofToString(duration), start_x, -60);
+            ofDrawBitmapString("[scene] " + scene_name[scene_index], start_x, -45);
+            ofDrawBitmapString("[time] " + ofToString(absoluteTime), start_x, -30);
+            ofDrawBitmapString("[sceneTime] " + ofToString(relativeTime) + " / " + ofToString(scene_endTime), start_x, -15);
+            ofDrawBitmapString("[adjust]" + ofToString(adjust_position), start_x + 200, -15);
+            ofDrawRectangle(start_x, 0, end_x, 1);
+            ofDrawLine(set_x, -10, set_x + 1, 10);
+            ofNoFill();
+            ofDrawEllipse(now_x, 0, 10, 10);
 
-        for (int i = 0; i < scene_name.size(); i++) {
-            ofSetColor(200);
-            int tmp = ofMap(startTime[i], 0, duration, start_x, end_x+30);
-            ofDrawEllipse(tmp, 0, 8, 8);
+            for (int i = 0; i < scene_name.size(); i++) {
+                ofSetColor(200);
+                int tmp = ofMap(startTime[i], 0, duration, start_x, end_x + 30);
+                ofDrawEllipse(tmp, 0, 8, 8);
+            }
+            ofFill();
+            ofPopMatrix();
         }
-        ofFill();
-        ofPopMatrix();
     }
 
     void play() {
@@ -106,10 +116,7 @@ class SoundPlayer {
         isPlaying = true;
     }
 
-    void pause(SceneManagement *_scene) {
-        for (int i = 0; i < _scene->isStart.size(); i++) {
-            _scene->isStart[i] = false;
-        }
+    void pause() {
         sound.setPaused(true);
         isPlaying = false;
     }
@@ -127,6 +134,7 @@ class SoundPlayer {
     int relativeTime;
     int absoluteTime;
     string now_scene;
+    int adjust_position;
 
    private:
     DataReaderConfig *config;
@@ -144,7 +152,7 @@ class SoundPlayer {
     vector<string> scene_name;
     vector<int> startTime;
     int sceneNum;
-    //    int now_position;
+    bool osc_receive_enabled;
 };
 
 #endif /* soundPlayer_hpp */

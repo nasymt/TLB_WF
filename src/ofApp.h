@@ -1,12 +1,11 @@
 #pragma once
 
 #include "ofMain.h"
-#include "DataReaderHex.hpp"
 #include "DataReaderConfig.hpp"
 #include "DataReaderBall.hpp"
 #include "hex.hpp"
 #include "ballManagement.hpp"
-#include "selectPad.hpp"
+#include "padManagement.hpp"
 #include "ofxGui.h"
 #include "serialCommunication.hpp"
 #include "soundPlayer.hpp"
@@ -37,12 +36,11 @@ class ofApp : public ofBaseApp {
     vector<Byte> sendHex;
 
    private:
-    DataReaderHex *hex_xml;
     DataReaderConfig *config_xml;
     DataReaderBall *ball_xml;
     BallBaseScene *baseScene;
     
-    SelectPad *pad;
+    PadManagement *pad;
     vector<BallManagement> ball;
     SoundPlayer sound;
     ofxPanel gui;

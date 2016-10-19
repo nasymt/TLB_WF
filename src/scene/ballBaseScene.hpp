@@ -14,7 +14,7 @@
 
 class BallBaseScene {
    public:
-    int setup(vector<BallManagement> *_ball) { ball_num = (*_ball)[0].ball_num; }
+    void setup(vector<BallManagement> *_ball) { ball_num = (*_ball)[0].ball_num; }
 
     int getColorNum(){return 6;};
     ofColor getColorPattern(int index) {
@@ -30,8 +30,18 @@ class BallBaseScene {
         }
         return tmp[index];
     }
+    
+    
 
+    int scene_index;
+    int startTime;
     int ball_num;
+    int fadeTime;
+    bool completed;
+    bool loop;
+    vector<ofColor> color;
+    vector<ofColor> color2;
+    vector<ofColor> color3;
 
    private:
 };

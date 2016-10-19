@@ -114,6 +114,7 @@
 		9604B925D32EE39065747725 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBaseGui.cpp; path = ../../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
 		965D49861DAA16070099C41A /* ballBaseScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ballBaseScene.hpp; path = scene/ballBaseScene.hpp; sourceTree = "<group>"; };
 		965D49881DAA2A6D0099C41A /* xml */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xml; path = bin/data/xml; sourceTree = "<group>"; };
+		96ABB2681DB0C844000BEABC /* DataReaderPad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataReaderPad.hpp; path = data/DataReaderPad.hpp; sourceTree = "<group>"; };
 		9BF3AA0D4FAA89D0F8A0E545 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscReceivedElements.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
 		9F7986DC4EB05E75FCE2C777 /* ofxOscSender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscSender.h; path = ../../../addons/ofxOsc/src/ofxOscSender.h; sourceTree = SOURCE_ROOT; };
 		A2AAA8CA403479E6FCDF920E /* OscHostEndianness.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscHostEndianness.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscHostEndianness.h; sourceTree = SOURCE_ROOT; };
@@ -126,7 +127,7 @@
 		BC8881B3C8C0A1C45F042E7A /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscPrintReceivedElements.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
 		BDDFEDB7DEDA4973C7D6E4C1 /* oscSenderReceiver.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = oscSenderReceiver.hpp; path = src/communication/oscSenderReceiver.hpp; sourceTree = SOURCE_ROOT; };
 		C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscReceiver.cpp; path = ../../../addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
-		C321B254DCE1C68957E698B1 /* selectPad.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = selectPad.hpp; path = src/selectPad.hpp; sourceTree = SOURCE_ROOT; };
+		C321B254DCE1C68957E698B1 /* padManagement.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = padManagement.hpp; path = src/padManagement.hpp; sourceTree = SOURCE_ROOT; };
 		C58862C6D212C8E8A83810F4 /* ofxOscMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscMessage.h; path = ../../../addons/ofxOsc/src/ofxOscMessage.h; sourceTree = SOURCE_ROOT; };
 		C6937888E126BADC8777423B /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
 		C70D8946940288799E82131E /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSliderGroup.h; path = ../../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
@@ -288,6 +289,7 @@
 				C8DC0D6EABF83BDE366DF0A2 /* DataReaderConfig.hpp */,
 				2265D3031E9B3FB09775BEED /* DataReaderScenes.hpp */,
 				ABF373717F0E773F93872A8D /* DataReaderSoundScene.hpp */,
+				96ABB2681DB0C844000BEABC /* DataReaderPad.hpp */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -389,7 +391,7 @@
 				DE867833A85D008E121D9C4E /* hex.hpp */,
 				32B3BF53328B46AFCC1B8483 /* management */,
 				38210A9855D9757B736E753B /* scene */,
-				C321B254DCE1C68957E698B1 /* selectPad.hpp */,
+				C321B254DCE1C68957E698B1 /* padManagement.hpp */,
 				8A2D35E34EC2F91BD5D28783 /* soundPlayer.hpp */,
 			);
 			path = src;

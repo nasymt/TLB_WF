@@ -1,7 +1,7 @@
 <scenes>
     <scene>
         <scene_name>scene1</scene_name>
-        <startTime>0</startTime>
+        <startTime>1</startTime>
         <scene_num>1</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -37,7 +37,7 @@
         <color_r>0</color_r>
         <color_g>255</color_g>
         <color_b>255</color_b>
-        <fadeTime>120</fadeTime>
+        <fadeTime>70</fadeTime>
     </scene>
     <!--<scene><!--unicast--
         <scene_name>scene2</scene_name>
@@ -49,6 +49,17 @@
         <color_b>255</color_b>
         <fadeTime>120</fadeTime>
     </scene>-->
+    
+    <scene>
+        <scene_name>scene2</scene_name>
+        <startTime>13150</startTime>
+        <scene_num>3</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>1</fadeTime>
+    </scene>
     <scene>
         <scene_name>scene2</scene_name>
         <startTime>13200</startTime>
@@ -81,7 +92,7 @@
     </scene>
     <scene>
         <scene_name>scene3</scene_name>
-        <startTime>3800</startTime>
+        <startTime>3700</startTime>
         <scene_num>1</scene_num>
         <loop>1</loop>
         <color_r>255</color_r>
@@ -91,22 +102,42 @@
     </scene>
     <scene>
         <scene_name>scene3</scene_name>
-        <startTime>7600</startTime>
+        <startTime>7500</startTime>
         <scene_num>6</scene_num>
         <loop>1</loop>
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>255</color_b>
-        <color2_r>255</color2_r>
-        <color2_g>180</color2_g>
-        <color2_b>0</color2_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
         <fadeTime>240</fadeTime>
     </scene>
     <scene>
         <scene_name>scene4</scene_name>
         <startTime>0</startTime>
         <scene_num>1</scene_num>
-        <loop>1</loop>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <fadeTime>950</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene4</scene_name>
+        <startTime>50</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <fadeTime>930</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene4</scene_name>
+        <startTime>950</startTime>
+        <scene_num>8</scene_num>
+        <loop>0</loop>
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>255</color_b>
@@ -116,7 +147,7 @@
         <scene_name>scene4</scene_name>
         <startTime>1900</startTime>
         <scene_num>1</scene_num>
-        <loop>1</loop>
+        <loop>0</loop>
         <color_r>0</color_r>
         <color_g>255</color_g>
         <color_b>0</color_b>
@@ -126,7 +157,7 @@
         <scene_name>scene4</scene_name>
         <startTime>3800</startTime>
         <scene_num>1</scene_num>
-        <loop>1</loop>
+        <loop>0</loop>
         <color_r>0</color_r>
         <color_g>255</color_g>
         <color_b>255</color_b>
@@ -136,7 +167,7 @@
         <scene_name>scene4</scene_name>
         <startTime>5700</startTime>
         <scene_num>1</scene_num>
-        <loop>1</loop>
+        <loop>0</loop>
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>255</color_b>
@@ -193,7 +224,7 @@
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
-        <fadeTime>1900</fadeTime>
+        <fadeTime>1500</fadeTime>
     </scene>
     <scene>
         <scene_name>scene5</scene_name>
@@ -201,9 +232,9 @@
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>255</color_r>
-        <color_g>180</color_g>
+        <color_g>0</color_g>
         <color_b>0</color_b>
-        <fadeTime>1900</fadeTime>
+        <fadeTime>1500</fadeTime>
     </scene>
     <scene>
         <scene_name>scene5</scene_name>
@@ -213,7 +244,7 @@
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
-        <fadeTime>1900</fadeTime>
+        <fadeTime>1500</fadeTime>
     </scene>
     <scene>
         <scene_name>scene5</scene_name>
@@ -221,13 +252,13 @@
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>255</color_r>
-        <color_g>180</color_g>
+        <color_g>0</color_g>
         <color_b>0</color_b>
-        <fadeTime>1900</fadeTime>
+        <fadeTime>1500</fadeTime>
     </scene>
     <scene>
         <scene_name>scene5</scene_name>
-        <startTime>15050</startTime>
+        <startTime>14950</startTime>
         <scene_num>8</scene_num>
         <loop>0</loop>
         <color_r>0</color_r>
@@ -239,17 +270,20 @@
     <scene>
         <scene_name>scene6</scene_name>
         <startTime>0</startTime>
-        <scene_num>6</scene_num>
+        <scene_num>9</scene_num>
         <loop>1</loop>
-        <color_r>0</color_r>
-        <color_g>255</color_g>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
         <color_b>255</color_b>
         <color2_r>0</color2_r>
-        <color2_g>0</color2_g>
+        <color2_g>255</color2_g>
         <color2_b>255</color2_b>
+        <color3_r>0</color3_r>
+        <color3_g>255</color3_g>
+        <color3_b>0</color3_b>
         <fadeTime>242</fadeTime>
     </scene>
-    <scene>
+<!--    <scene>
         <scene_name>scene6</scene_name>
         <startTime>3800</startTime>
         <scene_num>6</scene_num>
@@ -274,25 +308,57 @@
         <color2_g>255</color2_g>
         <color2_b>0</color2_b>
         <fadeTime>242</fadeTime>
-    </scene>
+    </scene>-->
     <scene>
         <scene_name>scene6</scene_name>
         <startTime>11200</startTime>
-        <scene_num>6</scene_num>
+        <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>255</color_r>
-        <color_g>180</color_g>
-        <color_b>0</color_b>
-        <color2_r>255</color2_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+<!--        <color2_r>0</color2_r>
         <color2_g>255</color2_g>
-        <color2_b>0</color2_b>
+        <color2_b>255</color2_b>-->
         <fadeTime>120</fadeTime>
+    </scene>
+    
+    <scene>
+        <scene_name>scene6</scene_name>
+        <startTime>12720</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>1</fadeTime>
+    </scene>
+    
+    <!--<scene>
+        <scene_name>scene6</scene_name>
+        <startTime>12770</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>1</fadeTime>
     </scene>
     <scene>
         <scene_name>scene6</scene_name>
         <startTime>13120</startTime>
         <scene_num>1</scene_num>
-        <loop>1</loop>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene6</scene_name>
+        <startTime>13580</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
@@ -307,13 +373,13 @@
         <color_g>0</color_g>
         <color_b>0</color_b>
         <fadeTime>120</fadeTime>
-    </scene>
+    </scene>-->
     <scene>
         <scene_name>scene6</scene_name>
         <startTime>14340</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
-        <color_r>255</color_r>
+        <color_r>0</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
         <fadeTime>120</fadeTime>
@@ -323,7 +389,7 @@
         <startTime>14580</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
-        <color_r>255</color_r>
+        <color_r>0</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
         <fadeTime>120</fadeTime>
@@ -345,9 +411,127 @@
 
 
 
-
-
     <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>0</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>3750</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>0</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>7450</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+<!--    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>7680</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>240</fadeTime>
+    </scene>-->
+    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>11200</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>0</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    
+
+<!--    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>7200</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>9000</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>10800</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene7</scene_name>
+        <startTime>12600</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>-->
+
+    <!--<scene>
         <scene_name>scene7</scene_name>
         <startTime>0</startTime>
         <scene_num>1</scene_num>
@@ -369,7 +553,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>1900</startTime>
+        <startTime>1800</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>255</color_r>
@@ -379,7 +563,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>2390</startTime>
+        <startTime>2320</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -389,7 +573,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>3850</startTime>
+        <startTime>3700</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>0</color_r>
@@ -399,7 +583,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>4340</startTime>
+        <startTime>4250</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -409,7 +593,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>5700</startTime>
+        <startTime>5600</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>255</color_r>
@@ -419,7 +603,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>6190</startTime>
+        <startTime>6100</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -429,7 +613,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>7580</startTime>
+        <startTime>7480</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>0</color_r>
@@ -439,7 +623,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>8070</startTime>
+        <startTime>8020</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -449,7 +633,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>9450</startTime>
+        <startTime>9350</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>255</color_r>
@@ -459,7 +643,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>9940</startTime>
+        <startTime>9850</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -469,7 +653,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>11350</startTime>
+        <startTime>11200</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>0</color_r>
@@ -479,7 +663,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>11840</startTime>
+        <startTime>11750</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -489,7 +673,7 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>13200</startTime>
+        <startTime>13100</startTime>
         <scene_num>1</scene_num>
         <loop>0</loop>
         <color_r>255</color_r>
@@ -499,14 +683,14 @@
     </scene>
     <scene>
         <scene_name>scene7</scene_name>
-        <startTime>13690</startTime>
+        <startTime>13640</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
         <fadeTime>242</fadeTime>
-    </scene>
+    </scene>-->
     
     
     
@@ -515,16 +699,57 @@
     <scene>
         <scene_name>scene8</scene_name>
         <startTime>0</startTime>
-        <scene_num>2</scene_num>
-        <loop>1</loop>
-        <color_r>0</color_r>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
         <color_g>0</color_g>
+        <color_b>255</color_b>
+        <fadeTime>950</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>1900</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>255</color_b>
+        <fadeTime>950</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>3800</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
         <color_b>0</color_b>
         <fadeTime>950</fadeTime>
     </scene>
     <scene>
         <scene_name>scene8</scene_name>
-        <startTime>7500</startTime>
+        <startTime>5700</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>950</fadeTime>
+    </scene>
+
+    <!--<scene>
+        <scene_name>scene8</scene_name>
+        <startTime>0</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>255</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>490</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
@@ -534,10 +759,183 @@
     </scene>
     <scene>
         <scene_name>scene8</scene_name>
-        <startTime>11200</startTime>
+        <startTime>1800</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>2320</startTime>
         <scene_num>2</scene_num>
         <loop>1</loop>
         <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>3700</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>4250</startTime>
+        <scene_num>2</scene_num>
+        <loop>1</loop>
+        <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>5600</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>6100</startTime>
+        <scene_num>2</scene_num>
+        <loop>1</loop>
+        <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>-->
+<!--    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>7500</startTime>
+        <scene_num>6</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <color2_r>0</color2_r>
+        <color2_g>255</color2_g>
+        <color2_b>255</color2_b>
+        <fadeTime>242</fadeTime>
+    </scene>-->
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>7500</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>8000</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>255</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>8450</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>8900</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>9400</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>0</color_g>
+        <color_b>255</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>9900</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>255</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>10350</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>10750</startTime>
+        <scene_num>1</scene_num>
+        <loop>0</loop>
+        <color_r>0</color_r>
+        <color_g>255</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>
+<!--    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>7500</startTime>
+        <scene_num>2</scene_num>
+        <loop>1</loop>
+        <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>242</fadeTime>
+    </scene>-->
+<!--    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>11200</startTime>
+        <scene_num>10</scene_num>
+        <loop>1</loop>
+        <color_r>0</color_r>
+        <color_g>0</color_g>
+        <color_b>0</color_b>
+        <fadeTime>120</fadeTime>
+    </scene>-->
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>11200</startTime>
+        <scene_num>2</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
         <fadeTime>120</fadeTime>
@@ -545,11 +943,34 @@
     <scene>
         <scene_name>scene8</scene_name>
         <startTime>13100</startTime>
-        <scene_num>8</scene_num>
-        <loop>0</loop>
+        <scene_num>10</scene_num>
+        <loop>1</loop>
         <color_r>255</color_r>
         <color_g>0</color_g>
         <color_b>0</color_b>
-        <fadeTime>3000</fadeTime>
+        <fadeTime>80</fadeTime>
     </scene>
+
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>15030</startTime>
+        <scene_num>3</scene_num>
+        <loop>1</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>255</color_b>
+        <fadeTime>10</fadeTime>
+    </scene>
+
+    <scene>
+        <scene_name>scene8</scene_name>
+        <startTime>15200</startTime>
+        <scene_num>3</scene_num>
+        <loop>0</loop>
+        <color_r>255</color_r>
+        <color_g>255</color_g>
+        <color_b>255</color_b>
+        <fadeTime>1</fadeTime>
+    </scene>
+
 </scenes>

@@ -13,14 +13,14 @@
 
 class SerialCommunication {
    public:
-    void setup(int i){
+    void setup(int i) {
         test = i;
         serial.listDevices();
         vector<ofSerialDeviceInfo> deviceList = serial.getDeviceList();
         int baud = 9600;
         serial.setup(0, baud);  // open the first device
     }
-    
+
     void sendSerial(vector<Byte> sendByte) {
         cout << "ok" << endl;
         for (int i = 0; i < sendByte.size(); i++) {
@@ -34,8 +34,8 @@ class SerialCommunication {
     void recvSerial() {
         while (serial.available() > 0) {
             int readByte = serial.readByte();
-            if( readByte == 82 || readByte == 130){
-                cout << "==get serial error==  " <<  readByte << endl;
+            if (readByte == 82 || readByte == 130) {
+                cout << "==get serial error==  " << readByte << endl;
             }
             cout << "[read] " << hex << readByte << endl;
         }
@@ -50,7 +50,7 @@ class SerialCommunication {
     }
 
     int test = 0;
-    
+
    private:
     ofSerial serial;
 };

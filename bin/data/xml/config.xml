@@ -4,7 +4,10 @@
         <channel>33</channel>
     </lpr_settings>
     <auto_setup>0</auto_setup>
-    <sound_path>worldforum.mp3</sound_path>
+    <sound_path>1019_worldforum.mp3</sound_path>
+    <sound_mute>0</sound_mute>
     <scene_threshold>30</scene_threshold>
+    <osc_receive_enabled>0</osc_receive_enabled>
+    <osc_receive_port>10000</osc_receive_port>
     
 </config>

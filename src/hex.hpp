@@ -397,8 +397,6 @@ class Hex {
     }
 
     vector<Byte> selectRandomColor(vector<bool> colorIndex) {
-        
-        
         vector<Byte> tmp_byte;
         //-----header-----------
         tmp_byte.push_back(0x5A);
@@ -420,9 +418,33 @@ class Hex {
         tmp_byte.push_back(0x09);
         tmp_byte.push_back(0x00);
         tmp_byte.push_back(0x1E);
-        
+
         return tmp_byte;
-        
+    }
+
+    vector<Byte> sensorThreshold(int threshold) {
+        vector<Byte> tmp_byte;
+        //-----header-----------
+        tmp_byte.push_back(0x5A);
+        tmp_byte.push_back(0xA5);
+        //-----command----------
+        tmp_byte.push_back(0x01);
+        //-----length-----------
+        tmp_byte.push_back(0x00);
+        tmp_byte.push_back(0x08);
+        //-----send option------
+        tmp_byte.push_back(0x04);
+        tmp_byte.push_back(0xFF);
+        tmp_byte.push_back(0xFF);
+        //---ball send type-----
+        tmp_byte.push_back(0xFF);
+        //---ball send func-----
+        tmp_byte.push_back(0x09);
+        tmp_byte.push_back(0x01);
+        tmp_byte.push_back(0x13);
+        tmp_byte.push_back(0x00);
+
+        return tmp_byte;
     }
 
     Byte checkSum(vector<Byte> _checksum) {

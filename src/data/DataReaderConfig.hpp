@@ -28,6 +28,9 @@ class DataReaderConfig {
         auto_setup = xml->getValue("auto_setup",0);
         sound_path = xml->getValue("sound_path","");
         threshold = xml->getValue("scene_threshold",0);
+        mute = xml->getValue("sound_mute",0);
+        receive_port = xml->getValue("osc_receive_port",0);
+        osc_receive_enabled = xml->getValue("osc_receive_enabled",0);
         delete xml;
     };
     
@@ -36,6 +39,9 @@ class DataReaderConfig {
     string sound_path;
     bool auto_setup;
     int threshold;
+    bool mute;
+    int receive_port;
+    bool osc_receive_enabled;
     
    private:
     ofxXmlSettings *xml;

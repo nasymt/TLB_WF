@@ -34,9 +34,13 @@ class DataReaderScenes {
             g = xml->getValue("scene:color2_g",0,i);
             b = xml->getValue("scene:color2_b",0,i);
             color2.push_back(ofColor(r,g,b));
+            r = xml->getValue("scene:color3_r",0,i);
+            g = xml->getValue("scene:color3_g",0,i);
+            b = xml->getValue("scene:color3_b",0,i);
+            color3.push_back(ofColor(r,g,b));
             
             fadeTime.push_back(xml->getValue("scene:fadeTime", 0, i));
-            cout << scene_name[i] << " : " << startTime[i] << endl;
+//            cout << scene_name[i] << " : " << startTime[i] << endl;
         }
     };
 
@@ -46,6 +50,7 @@ class DataReaderScenes {
     vector<int> scene_num;
     vector<ofColor> color;
     vector<ofColor> color2;
+    vector<ofColor> color3;
     vector<int> fadeTime;
     vector<bool> loop;
 
