@@ -11,12 +11,18 @@
 
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
+#include "DataReaderConfig.hpp"
 
 class DataReaderScenes {
    public:
     void loadXml(string path) {
+        config = new DataReaderConfig();
+        config->loadXml("xml/config.xml");
+        string scene_path = config->scene_path;
+        //cout << scene_path << endl;
         xml = new ofxXmlSettings();
-        xml->load("xml/scenes.xml");
+        // xml->load("xml/scenes.xml");
+        xml->load(scene_path);
 
         xml->pushTag("scenes");
         sceneNum = xml->getNumTags("scene");
@@ -30,18 +36,22 @@ class DataReaderScenes {
             g = xml->getValue("scene:color_g", 0, i);
             b = xml->getValue("scene:color_b", 0, i);
             color.push_back(ofColor(r, g, b));
-            r = xml->getValue("scene:color2_r",0,i);
-            g = xml->getValue("scene:color2_g",0,i);
-            b = xml->getValue("scene:color2_b",0,i);
-            color2.push_back(ofColor(r,g,b));
-            r = xml->getValue("scene:color3_r",0,i);
-            g = xml->getValue("scene:color3_g",0,i);
-            b = xml->getValue("scene:color3_b",0,i);
-            color3.push_back(ofColor(r,g,b));
-            
+            r = xml->getValue("scene:color2_r", 0, i);
+            g = xml->getValue("scene:color2_g", 0, i);
+            b = xml->getValue("scene:color2_b", 0, i);
+            color2.push_back(ofColor(r, g, b));
+            r = xml->getValue("scene:color3_r", 0, i);
+            g = xml->getValue("scene:color3_g", 0, i);
+            b = xml->getValue("scene:color3_b", 0, i);
+            color3.push_back(ofColor(r, g, b));
+
             fadeTime.push_back(xml->getValue("scene:fadeTime", 0, i));
-//            cout << scene_name[i] << " : " << startTime[i] << endl;
+            //            cout << scene_name[i] << " : " << startTime[i] << endl;
+
+            //            delete config;
         }
+        delete config;
+        delete xml;
     };
 
     int sceneNum;
@@ -55,6 +65,7 @@ class DataReaderScenes {
     vector<bool> loop;
 
    private:
+    DataReaderConfig *config;
     ofxXmlSettings *xml;
 };
 

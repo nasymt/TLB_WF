@@ -24,6 +24,8 @@ class DataReaderSoundScene {
             name.push_back(xml->getValue("scene:name", "", i));
             startTime.push_back(xml->getValue("scene:startTime", 0, i));
         }
+        
+        delete xml;
     };
 
     int sceneNum;

@@ -131,9 +131,68 @@ class SceneManagement {
         //        char tmp = key;
         switch (key) {
             case '1':
-                if(!pad.isActive[0])pad.isActive[0] = true;
+                if(!pad.isActive[0])pad.on(0);
+                else pad.off(0);
                 break;
             case '2':
+                if(!pad.isActive[1])pad.on(1);
+                else pad.off(1);
+                break;
+            case '3':
+                if(!pad.isActive[2])pad.on(2);
+                else pad.off(2);
+                break;
+            case '4':
+                if(!pad.isActive[3])pad.on(3);
+                else pad.off(3);
+                break;
+            case 'q':
+                if(!pad.isActive[4])pad.on(4);
+                else pad.off(4);
+                break;
+            case 'w':
+                if(!pad.isActive[5])pad.on(5);
+                else pad.off(5);
+                break;
+            case 'e':
+                if(!pad.isActive[6])pad.on(6);
+                else pad.off(6);
+                break;
+            case 'r':
+                if(!pad.isActive[7])pad.on(7);
+                else pad.off(7);
+                break;
+            case 'a':
+                if(!pad.isActive[8])pad.on(8);
+                else pad.off(8);
+                break;
+            case 's':
+                if(!pad.isActive[9])pad.on(9);
+                else pad.off(9);
+                break;
+            case 'd':
+                if(!pad.isActive[10])pad.on(10);
+                else pad.off(10);
+                break;
+            case 'f':
+                if(!pad.isActive[11])pad.on(11);
+                else pad.off(11);
+                break;
+            case 'z':
+                if(!pad.isActive[12])pad.on(12);
+                else pad.off(12);
+                break;
+            case 'x':
+                if(!pad.isActive[13])pad.on(13);
+                else pad.off(13);
+                break;
+            case 'c':
+                if(!pad.isActive[14])pad.on(14);
+                else pad.off(14);
+                break;
+            case 'v':
+                if(!pad.isActive[15])pad.on(15);
+                else pad.off(15);
                 break;
         }
     }

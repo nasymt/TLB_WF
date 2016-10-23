@@ -1,0 +1,47 @@
+<soundScene>
+    <!--<scene>
+        <name>scene1</name>
+        <startTime>0</startTime>
+    </scene>
+    <scene>
+        <name>scene2</name>
+        <startTime>7500</startTime>
+    </scene>
+    <scene>
+        <name>scene3</name>
+        <startTime>22500</startTime>
+    </scene>
+    <scene>
+        <name>scene4</name>
+        <startTime>37500</startTime>
+    </scene>
+    <scene>
+        <name>scene5</name>
+        <startTime>52500</startTime>
+    </scene>
+    <scene>
+        <name>scene6</name>
+        <startTime>71300</startTime>
+    </scene>
+    <scene>
+        <name>scene7</name>
+        <startTime>86300</startTime>
+    </scene>
+    <scene>
+        <name>scene8</name>
+        <startTime>101200</startTime>
+    </scene>-->
+    <!--<scene>
+        <name>scene6</name>
+        <startTime>0</startTime>
+    </scene>-->
+    <scene>
+        <name>scene7</name>
+        <startTime>0</startTime>
+    </scene>
+    <scene>
+        <name>scene8</name>
+        <startTime>15000</startTime>
+    </scene>
+    
+</soundScene>

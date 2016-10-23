@@ -84,25 +84,27 @@ void ofApp::draw() {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
-    if (key == 'z') {
+    if (key == 't') {
         _serial.sendSerial(_hex.connect());
-    } else if (key == 'x') {
+    } else if (key == 'y') {
         _serial.sendSerial(_hex.setChannel(ofToInt(lpr_channel)));
-    } else if (key == 'c') {
+    } else if (key == 'u') {
         _serial.sendSerial(_hex.setNode(ofToInt(lpr_node)));
-    } else if (key == 'v') {
-    } else if (key == 'b') {
+    } else if (key == 'i') {
         _serial.sendSerial(_hex.changeColor(color, 5000));
-    } else if (key == 'n') {
+    } else if (key == 'o') {
         _serial.sendSerial(_hex.lightoff());
-    } else if (key == 'm') {
-        _serial.sendSerial(_hex.setDirectAlpha(50));
-    } else if (key == 'a') {
+    } else if (key == 'p') {
+        _serial.sendSerial(_hex.setDirectAlpha(10));
+    }else if(key == 'g'){
+        _serial.sendSerial(_hex.sensorThreshold(0));
+    }
+    /*else if (key == 'a') {
         _serial.sendSerial(_hex.changeGroupColor(1, ofColor(0, 255, 255), 1000));
     } else if (key == 's') {
         _serial.sendSerial(_hex.changeGroupColor(2, ofColor(0, 255, 255), 1000));
     } else if (key == 'q') {
-//        _serial.sendSerial(_hex.uartOverrunResend());
+        _serial.sendSerial(_hex.uartOverrunResend());
         _serial.sendSerial(_hex.sensorThreshold(0));
     } else if (key == 'w') {
         vector<bool> colorIndex;
@@ -112,28 +114,23 @@ void ofApp::keyPressed(int key) {
         _serial.sendSerial(_hex.selectRandomColor(colorIndex));
     } else if (key == 'e') {
         _serial.sendSerial(_hex.randomColor(1000));
+    }*/
+    
+
+    if (key == '9') {
+//        _serial.sendSerial(_hex.setGroupId(1));
+        _serial.sendSerial(_hex.changeGroupColor(1, ofColor(0, 255, 255), 1000));
+
+    } else if (key == '0') {
+        _serial.sendSerial(_hex.changeGroupColor(2, ofColor(0, 255, 255), 1000));
+//        _serial.sendSerial(_hex.setGroupId(2));
     }
 
-/*    if (key == '1') {
-        _serial.sendSerial(_hex.setGroupId(1));
-    } else if (key == '2') {
-        _serial.sendSerial(_hex.setGroupId(2));
-    } else if (key == '3') {
-        _serial.sendSerial(_hex.setGroupId(3));
-    } else if (key == '4') {
-        _serial.sendSerial(_hex.setGroupId(4));
-    } else if (key == '5') {
-        _serial.sendSerial(_hex.setGroupId(5));
-    } else if (key == '6') {
-        _serial.sendSerial(_hex.setGroupId(6));
-    }*/
-
-    if (key == 'p') {
+    if (key == 32) {
         if (sound.isPlaying) {
             for (int i = 0; i < scene.isStart.size(); i++) {
                 scene.isStart[i] = false;
             }
-
             sound.pause();
         } else {
             sound.play();

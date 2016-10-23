@@ -28,6 +28,7 @@ class DataReaderBall {
             _id.push_back(xml->getValue("ball:id", 0, i));
             group_id.push_back(xml->getValue("ball:group_id", 0, i));
         }
+        delete xml;
     };
 
     int ball_num;

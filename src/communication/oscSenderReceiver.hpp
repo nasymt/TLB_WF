@@ -11,13 +11,10 @@
 
 #include "ofMain.h"
 #include "ofxOsc.h"
-//#include "DataReaderConfig.hpp"
 
 class OscSenderReceiver {
    public:
     void setup(int _receive_port) {
-//        config = new DataReaderConfig();
-//        receive_port = config->receive_port;
         sender.setup("127.0.0.1", 10000);
         receiver.setup(_receive_port);
     }
@@ -42,8 +39,6 @@ class OscSenderReceiver {
    private:
     ofxOscSender sender;
     ofxOscReceiver receiver;
-//    DataReaderConfig *config;
-//    int receive_port;
 };
 
 #endif /* oscSenderReceiver_hpp */

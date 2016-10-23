@@ -288,7 +288,7 @@ class Hex {
         tmp_byte.push_back(0x01);
         //-----length-----------
         tmp_byte.push_back(0x00);
-        tmp_byte.push_back(0x09);
+        tmp_byte.push_back(0x08);
         //-----send option------
         tmp_byte.push_back(0x04);
         tmp_byte.push_back(0xFF);
@@ -299,7 +299,7 @@ class Hex {
         tmp_byte.push_back(0x09);
         tmp_byte.push_back(0x00);
         tmp_byte.push_back(0x06);
-        tmp_byte.push_back(0x00);
+//        tmp_byte.push_back(0x00);
         tmp_byte.push_back(alpha);
 
         return tmp_byte;
@@ -323,14 +323,8 @@ class Hex {
             }
         }
 
-        //            cout << tmp[1] << " : " << amari[0] << endl;
-        //            cout << tmp[2] << " : " << amari[1] << endl;
-        //            cout << tmp[3] << " : " << amari[2] << endl;
-        //            cout <<"---------------" << endl;
-        //            cout << hexnum[3]<<" " << hexnum[2] << " " << hexnum[1] << " " << hexnum[0] << endl;
         int num_hi = hexnum[3] * 16 + hexnum[2];
         int num_low = hexnum[1] * 16 + hexnum[0];
-        //            cout << num_hi << " " << num_low << endl;
         vector<int> _tmp;
         _tmp.push_back(num_hi);
         _tmp.push_back(num_low);
@@ -431,7 +425,7 @@ class Hex {
         tmp_byte.push_back(0x01);
         //-----length-----------
         tmp_byte.push_back(0x00);
-        tmp_byte.push_back(0x08);
+        tmp_byte.push_back(0x09);
         //-----send option------
         tmp_byte.push_back(0x04);
         tmp_byte.push_back(0xFF);
@@ -442,6 +436,7 @@ class Hex {
         tmp_byte.push_back(0x09);
         tmp_byte.push_back(0x01);
         tmp_byte.push_back(0x13);
+        tmp_byte.push_back(threshold);
         tmp_byte.push_back(0x00);
 
         return tmp_byte;

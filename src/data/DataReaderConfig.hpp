@@ -26,6 +26,7 @@ class DataReaderConfig {
         lpr_channel = xml->getValue("channel","");
         xml->popTag();
         auto_setup = xml->getValue("auto_setup",0);
+        scene_path = xml->getValue("scene_path","");
         sound_path = xml->getValue("sound_path","");
         threshold = xml->getValue("scene_threshold",0);
         mute = xml->getValue("sound_mute",0);
@@ -37,6 +38,7 @@ class DataReaderConfig {
     string lpr_node;
     string lpr_channel;
     string sound_path;
+    string scene_path;
     bool auto_setup;
     int threshold;
     bool mute;

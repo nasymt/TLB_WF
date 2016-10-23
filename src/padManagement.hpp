@@ -15,7 +15,6 @@
 
 class PadManagement {
    public:
-    //    void setup(SerialCommunication &_serial) {
     void setup() {
         for (int i = 0; i < pad_num; i++) {
             isActive.push_back(false);
@@ -75,16 +74,11 @@ class PadManagement {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 if (mouseX > j * 30 + translateX && mouseX < j * 30 + 20 + translateX && mouseY > i * 30 + translateY && mouseY < i * 30 + 20 + translateY) {
-                    if (isActive[j + i * 4]) {
-                        isActive[j + i * 4] = false;
-                        stop = true;
+                    int index = j + i * 4;
+                    if (isActive[index]) {
+                        off(index);
                     } else {
-                        for (int k = 0; k < isActive.size(); k++) {
-                            isActive[k] = false;
-                        }
-                        isActive[j + i * 4] = true;
-                        bang[j + i * 4] = true;
-                        stop = false;
+                        on(index);
                     }
                 }
             }
@@ -117,7 +111,10 @@ class PadManagement {
         stop = false;
     }
 
-    void keyEvent(int key) {}
+    void off(int index) {
+        isActive[index] = false;
+        stop = true;
+    }
 
     vector<bool> isActive;
     vector<bool> bang;
@@ -133,7 +130,6 @@ class PadManagement {
     bool edit_mode;
     int active_color;
     int active_color_dis;
-    //    SerialCommunication *serial;
     Hex _hex;
 };
 

@@ -502,7 +502,7 @@ class BallScene9 : public BallBaseScene {
         color3 = _color3;
         _hex = new Hex();
         startTime = ofGetElapsedTimeMillis();
-        cout << "BallScene6 setup" << _serial->test << endl;
+        cout << "BallScene9 setup" << _serial->test << endl;
         scene_index = 0;
         count = 0;
     }

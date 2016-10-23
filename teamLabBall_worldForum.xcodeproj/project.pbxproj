@@ -96,7 +96,6 @@
 		63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
 		6B65E6930994CC4B2D2B8B33 /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
-		71A5B26141AEC7D31CD565F0 /* serialManagement.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = serialManagement.hpp; path = src/communication/serialManagement.hpp; sourceTree = SOURCE_ROOT; };
 		73247E874D6F3E489F911444 /* sceneContents.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sceneContents.hpp; path = src/scene/sceneContents.hpp; sourceTree = SOURCE_ROOT; };
 		7689F8A0F3D0B7635A8C3104 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../../../addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
 		776AAA52F9329902252400F4 /* serialCommunication.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = serialCommunication.hpp; path = src/communication/serialCommunication.hpp; sourceTree = SOURCE_ROOT; };
@@ -429,7 +428,6 @@
 			children = (
 				BDDFEDB7DEDA4973C7D6E4C1 /* oscSenderReceiver.hpp */,
 				776AAA52F9329902252400F4 /* serialCommunication.hpp */,
-				71A5B26141AEC7D31CD565F0 /* serialManagement.hpp */,
 			);
 			name = communication;
 			sourceTree = "<group>";
